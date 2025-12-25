@@ -1,5 +1,5 @@
 import { CheckCircle2, ArrowRight, Mail, MapPin, MessageSquare, FileText, Calculator, CheckCircle, Pin, Percent, TrendingDown, AlertCircle, Loader2 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useState } from 'react';
 import LoanSimulator from '../components/LoanSimulator';
 import FAQ from '../components/FAQ';
