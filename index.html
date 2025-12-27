@@ -12,5 +12,33 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+(function() {
+  var trackingId = '29fd8e2f4cec72479a9dbd8f7049509d';
+  var apiUrl = 'https://fppdqinxcxvubxqoyezr.supabase.co/functions/v1/track';
+
+  function track() {
+    fetch(apiUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        trackingId: trackingId,
+        pageUrl: window.location.href,
+        pageTitle: document.title,
+        referrer: document.referrer,
+        userAgent: navigator.userAgent
+      })
+    }).catch(function(err) {
+      console.error('Tracking error:', err);
+    });
+  }
+
+  if (document.readyState === 'complete') {
+    track();
+  } else {
+    window.addEventListener('load', track);
+  }
+})();
+</script>
   </body>
 </html>
