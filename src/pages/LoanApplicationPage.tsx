@@ -197,7 +197,7 @@ export default function LoanApplicationPage() {
 
 📌 O pagamento da taxa deve ser feito com o mesmo número informado.`;
 
-    const whatsappUrl = `https://wa.me/258851576729?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/258851520538?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
